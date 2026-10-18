@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Efe Dönmez - FTR Öğrencisi | Kişisel Web Sitesi" />
+  <meta property="og:title" content="Efe Dönmez | efedonmez.com" />
+  <meta property="og:description" content="Efe Dönmez - Kişisel Vitrin" />
+  <meta property="og:url" content="https://efedonmez.com" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://efedonmez.com/" />
+  
+  <title>Efe Dönmez | efedonmez.com</title>
+  
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/showcase.css" />
+</head>
+<body>
+
+  <!-- Üst Kaydırma İlerleme Çizgisi -->
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- İnteraktif Yıldız & Parçacık Ağı Canvas -->
+  <canvas id="bg-particles" aria-hidden="true"></canvas>
+
+  <!-- Arka Plan Akıcı Aurora & Siber Izgara Animasyonu -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="cyber-grid"></div>
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+    <div class="glow-orb glow-orb-4"></div>
+  </div>
+
+  <!-- Fare Takipçi Işık Hüzmesi -->
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Üst Navigasyon -->
+  <header>
+    <div class="nav-container">
+      <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="brand-btn" aria-label="Ana Sayfa">
+        <span class="brand-dot"></span>
+        Efe<span class="accent">Dönmez</span>
+      </button>
+      <nav class="nav-tabs">
+        <a href="#vitrin" class="tab-btn active">
+          <span>⚡</span> Hakkımda
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Ana İçerik -->
+  <main>
+
+    <!-- 1. HAKKIMDA & BENTO VİTRİN SEKMESİ -->
+    <section id="view-showcase" class="fade-in">
+      
+      <!-- Hero Giriş -->
+      <div class="hero-section">
+        <div class="profile-badge-row stagger-item" style="--delay: 0.05s">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>FTR Öğrencisi 🎓</span>
+          </div>
+          <div class="status-pill pill-glow">
+            <span class="floating-emoji">🎧</span>
+            <span id="typewriter-text">Müzik & Oyun</span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+        </div>
+
+        <div class="hero-main">
+          <div class="hero-name-row stagger-item" style="--delay: 0.12s">
+            <div class="avatar-wrapper" onclick="triggerAvatarBurst(event)" title="Tıkla!">
+              <div class="avatar-ring"></div>
+              <div class="avatar-ring-outer"></div>
+              <div class="hero-avatar">ED</div>
+            </div>
+            <div class="hero-titles">
+              <h1 class="shimmer-title">Efe Dönmez</h1>
+              <p class="hero-subtitle">
+                <span>FTR (Fizik Tedavi ve Rehabilitasyon)</span>
+              </p>
+            </div>
+          </div>
+
+          <p class="hero-bio stagger-item" style="--delay: 0.2s">
+            Üniversitede FTR okuyorum. Günün çoğu okulda, derslerde ya da antrenmanda geçiyor; akşamları da müzik, arkadaşlarla oyun veya kafa dağıtmalık şeyler.
+          </p>
+
+          <!-- Sosyal Medya Şeridi -->
+          <div class="social-strip stagger-item" style="--delay: 0.28s" id="social-strip"></div>
+
+          <!-- Aksiyon Butonları -->
+          <div class="hero-cta-group stagger-item" style="--delay: 0.35s">
+            <a href="#vitrin" class="btn-hero-primary" style="text-decoration: none;">
+              <span class="btn-shine"></span>
+              <span>Hakkımda & Vitrin</span>
+              <span class="bounce-arrow">↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sonsuz Kayan Şerit (Marquee Ticker) -->
+      <div class="marquee-wrapper stagger-item" style="--delay: 0.42s">
+        <div class="marquee-track">
+          <div class="marquee-content">
+            <span>⚡ FTR & FİZYOTERAPİ</span><span class="sep">✦</span>
+            <span>💪 DÜZENLİ ANTRENMAN</span><span class="sep">✦</span>
+            <span>🎧 SÜREKLİ MÜZİK</span><span class="sep">✦</span>
+            <span>🎮 OYUN & MUHABBET</span><span class="sep">✦</span>
+            <span>☕ KAFA DENGİ SOHBET</span><span class="sep">✦</span>
+            <span>🌐 EFEDONMEZ.COM</span><span class="sep">✦</span>
+            <span>⚡ FTR & FİZYOTERAPİ</span><span class="sep">✦</span>
+            <span>💪 DÜZENLİ ANTRENMAN</span><span class="sep">✦</span>
+            <span>🎧 SÜREKLİ MÜZİK</span><span class="sep">✦</span>
+            <span>🎮 OYUN & MUHABBET</span><span class="sep">✦</span>
+            <span>☕ KAFA DENGİ SOHBET</span><span class="sep">✦</span>
+            <span>🌐 EFEDONMEZ.COM</span><span class="sep">✦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- İstatistik Sayaçları -->
+      <div class="stats-grid" id="stats-container"></div>
+
+      <!-- Bento Grid Vitrin Başlığı -->
+      <div class="section-header" id="vitrin">
+        <div class="section-title">
+          <span class="zap-icon">⚡</span>
+          <span>Hakkımda & Neler Yapıyorum?</span>
+        </div>
+        <span class="section-sub">efedonmez.com</span>
+      </div>
+
+      <!-- Dinamik Bento Grid Kartları -->
+      <div class="bento-grid" id="bento-container"></div>
+
+    </section>
+  </main>
+
+  <!-- Alt Bilgi -->
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Efe Dönmez • efedonmez.com</span>
+      <span>Tüm hakları saklıdır</span>
+    </div>
+  </footer>
+
+  <!-- Modüler Script Bileşenleri (< 200 Satır Kuralına Uygun) -->
+  <script src="js/confetti.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="data/profile.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
