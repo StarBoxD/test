@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initCursorAndSpotlights() {
+  if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
+    return;
+  }
   const cursorGlow = document.getElementById('cursor-glow');
   let lastCard = null;
   let rafPending = false;
@@ -55,6 +58,7 @@ function initCursorAndSpotlights() {
 
 function initClickRipples() {
   window.addEventListener('pointerdown', (e) => {
+    if (document.querySelectorAll('.click-ripple').length >= 3) return;
     const ripple = document.createElement('div');
     ripple.className = 'click-ripple';
     ripple.style.left = `${e.clientX}px`;
@@ -92,7 +96,8 @@ function initBackgroundParticles() {
     height = canvas.height = window.innerHeight;
   }, { passive: true });
 
-  const count = width < 640 ? 18 : 36;
+  const isMobile = width < 640 || (window.matchMedia && window.matchMedia('(max-width: 640px)').matches);
+  const count = isMobile ? 14 : 32;
   const colors = ['#818cf8', '#38bdf8', '#34d399', '#c084fc'];
   const particles = Array.from({ length: count }, () => ({
     x: Math.random() * width,

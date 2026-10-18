@@ -52,7 +52,7 @@ function renderProfileData() {
   if (socialContainer && PROFILE_DATA.socials) {
     socialContainer.innerHTML = PROFILE_DATA.socials.map(soc => `
       <a href="${soc.url}" target="_blank" rel="noopener noreferrer" class="social-badge">
-        <span class="floating-emoji">${soc.icon}</span>
+        <span class="social-icon">${soc.icon}</span>
         <span>${soc.name}</span>
       </a>
     `).join('');
@@ -91,7 +91,9 @@ function getBentoWidgetHtml(id) {
       </div>
     `;
   }
-  if (id === 'oyun' || id === 'gaming') return `<span class="game-ping">🕹️</span>`;
+  if (id === 'oyun' || id === 'gaming') {
+    return `<span class="game-ping" title="Oyun"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect width="20" height="12" x="2" y="6" rx="6"/><path d="M6 12h4"/><path d="M8 10v4"/><circle cx="17" cy="10" r=".8" fill="#f59e0b"/><circle cx="15" cy="13" r=".8" fill="#f59e0b"/></svg></span>`;
+  }
   return '';
 }
 
