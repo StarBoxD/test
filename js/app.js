@@ -3,6 +3,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   renderProfileData();
   initTypewriter();
+
+  // Sayfada metin seçimini ve kopyalamayı engelleme
+  document.addEventListener('selectstart', (e) => e.preventDefault());
 });
 
 function renderProfileData() {
